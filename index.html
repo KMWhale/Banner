@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Serviços de Tecnologia e Soluções Digitais</title>
+<meta name="description" content="Suporte técnico, tratamento de dados e desenvolvimento de websites. Freelancer especializado em tecnologia." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root{
+    --bg:#0B0B0B; --navy:#0F172A; --blue:#2563EB; --blue-glow:#3B82F6;
+    --graphite:#374151; --light:#D1D5DB; --white:#FFFFFF;
+  }
+  html,body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+  body{min-height:100vh;overflow-x:hidden;}
+
+  /* Background tech layer */
+  .stage{position:relative;min-height:100vh;overflow:hidden;
+    background:
+      radial-gradient(1200px 600px at 85% 50%, rgba(37,99,235,.25), transparent 60%),
+      radial-gradient(900px 500px at 10% 20%, rgba(37,99,235,.10), transparent 60%),
+      linear-gradient(135deg,#000 0%, #0B0B0B 40%, #0F172A 100%);
+  }
+  .grid-bg{position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(37,99,235,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37,99,235,.07) 1px, transparent 1px);
+    background-size:48px 48px;
+    mask-image:radial-gradient(ellipse at center, #000 40%, transparent 80%);
+    pointer-events:none;
+  }
+  .circuits{position:absolute;inset:0;pointer-events:none;opacity:.55;}
+  .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;pointer-events:none;}
+  .orb-1{width:520px;height:520px;background:#2563EB;top:-120px;right:-120px;}
+  .orb-2{width:380px;height:380px;background:#1d4ed8;bottom:-140px;left:-100px;opacity:.35;}
+
+  /* Banner layout */
+  .banner{position:relative;max-width:1440px;margin:0 auto;padding:64px 56px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;min-height:100vh;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.2em;color:var(--light);text-transform:uppercase;margin-bottom:28px;}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--blue);box-shadow:0 0 18px var(--blue-glow);}
+  h1{font-size:clamp(38px,4.4vw,64px);line-height:1.05;font-weight:800;letter-spacing:-.02em;}
+  h1 .accent{background:linear-gradient(90deg,#60A5FA,#2563EB);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .subtitle{margin-top:20px;font-size:clamp(15px,1.2vw,18px);color:var(--light);max-width:560px;line-height:1.6;}
+
+  /* Bubbles */
+  .bubbles{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .bubble{position:relative;padding:22px 20px;border-radius:18px;
+    background:linear-gradient(160deg, rgba(15,23,42,.85), rgba(11,11,11,.6));
+    border:1px solid rgba(37,99,235,.25);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    box-shadow:0 20px 50px -20px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.04);
+    transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  }
+  .bubble:hover{transform:translateY(-4px);border-color:rgba(37,99,235,.6);box-shadow:0 28px 60px -20px rgba(37,99,235,.45);}
+  .bubble .icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:20px;
+    background:linear-gradient(135deg,#1e3a8a,#2563EB);box-shadow:0 8px 20px -6px rgba(37,99,235,.7);margin-bottom:14px;}
+  .bubble h3{font-size:15px;font-weight:700;margin-bottom:12px;letter-spacing:-.01em;}
+  .bubble ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+  .bubble li{font-size:12.5px;color:var(--light);display:flex;align-items:center;gap:8px;font-weight:500;}
+  .bubble li::before{content:"";width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#2563EB,#1d4ed8);
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/70% no-repeat;
+            mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='20 6 9 17 4 12'/></svg>") center/70% no-repeat;
+    flex:none;}
+
+  /* CTA */
+  .cta-row{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:18px;}
+  .cta{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:14px;font-weight:700;font-size:15px;
+    background:linear-gradient(135deg,#2563EB,#1d4ed8);color:#fff;text-decoration:none;
+    box-shadow:0 18px 40px -12px rgba(37,99,235,.7), inset 0 1px 0 rgba(255,255,255,.2);
+    transition:transform .25s ease, box-shadow .25s ease;}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 24px 50px -12px rgba(37,99,235,.9);}
+  .cta svg{width:18px;height:18px;}
+  .contacts{display:flex;gap:14px;flex-wrap:wrap;}
+  .contact{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;
+    background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--light);
+    text-decoration:none;font-size:13px;font-weight:500;transition:all .25s ease;}
+  .contact:hover{color:#fff;border-color:rgba(37,99,235,.6);background:rgba(37,99,235,.1);}
+  .contact svg{width:16px;height:16px;}
+
+  /* Right side - portrait */
+  .portrait-wrap{position:relative;aspect-ratio:1/1;width:100%;max-width:560px;justify-self:end;}
+  .portrait-frame{position:relative;width:100%;height:100%;border-radius:28px;overflow:hidden;
+    border:1px solid rgba(37,99,235,.35);
+    box-shadow:0 40px 100px -20px rgba(37,99,235,.45), 0 0 0 1px rgba(255,255,255,.04) inset;
+    background:#000;}
+  .portrait-frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .portrait-frame::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 50%, rgba(11,11,11,.5) 100%),
+               linear-gradient(90deg, rgba(11,11,11,.5) 0%, transparent 30%);
+    pointer-events:none;}
+  /* floating tech tags */
+  .tag{position:absolute;padding:10px 14px;border-radius:12px;background:rgba(15,23,42,.85);
+    border:1px solid rgba(37,99,235,.4);backdrop-filter:blur(10px);
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--light);
+    box-shadow:0 14px 40px -10px rgba(0,0,0,.7);display:flex;align-items:center;gap:8px;}
+  .tag .pulse{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 12px #22c55e;animation:pulse 1.6s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
+  .tag-1{top:8%;left:-6%;}
+  .tag-2{bottom:14%;right:-6%;}
+  .tag-3{bottom:-3%;left:10%;}
+
+  /* responsive */
+  @media (max-width: 980px){
+    .banner{grid-template-columns:1fr;padding:40px 24px;gap:40px;}
+    .portrait-wrap{justify-self:center;max-width:420px;}
+    .bubbles{grid-template-columns:1fr;}
+    .tag-1{left:4%;} .tag-2{right:4%;} .tag-3{left:4%;}
+  }
+</style>
+</head>
+<body>
+<main class="stage">
+  <div class="grid-bg"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <svg class="circuits" viewBox="0 0 1440 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="ln" x1="0" x2="1">
+        <stop offset="0%" stop-color="#2563EB" stop-opacity="0"/>
+        <stop offset="50%" stop-color="#60A5FA" stop-opacity=".9"/>
+        <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <g stroke="url(#ln)" stroke-width="1" fill="none" opacity=".6">
+      <path d="M0,120 L300,120 L340,160 L700,160"/>
+      <path d="M0,420 L180,420 L220,380 L520,380 L560,420 L900,420"/>
+      <path d="M1440,260 L1180,260 L1140,300 L820,300"/>
+      <path d="M1440,640 L1200,640 L1160,680 L900,680"/>
+      <path d="M0,780 L420,780 L460,740 L820,740"/>
+    </g>
+    <g fill="#60A5FA">
+      <circle cx="300" cy="120" r="3"/><circle cx="700" cy="160" r="3"/>
+      <circle cx="520" cy="380" r="3"/><circle cx="900" cy="420" r="3"/>
+      <circle cx="1180" cy="260" r="3"/><circle cx="820" cy="300" r="3"/>
+      <circle cx="1200" cy="640" r="3"/><circle cx="900" cy="680" r="3"/>
+      <circle cx="420" cy="780" r="3"/><circle cx="820" cy="740" r="3"/>
+    </g>
+  </svg>
+
+  <section class="banner">
+    <div class="content">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Freelancer • Tech Solutions</span>
+      </div>
+      <h1>Serviços de Tecnologia<br/>e <span class="accent">Soluções Digitais</span></h1>
+      <p class="subtitle">Suporte técnico, tratamento de dados e desenvolvimento de websites. Soluções profissionais para impulsionar seu negócio com performance e confiança.</p>
+
+      <div class="bubbles">
+        <div class="bubble">
+          <div class="icon">🖥️</div>
+          <h3>Reformatação & Novo Sistema</h3>
+          <ul>
+            <li>Formatação completa</li>
+            <li>Instalação do Windows</li>
+            <li>Backup de arquivos</li>
+            <li>Remoção de lentidão</li>
+            <li>Otimização do PC</li>
+          </ul>
+        </div>
+        <div class="bubble">
+          <div class="icon">📊</div>
+          <h3>Tratamento de Dados</h3>
+          <ul>
+            <li>Limpeza de dados</li>
+            <li>Organização de planilhas</li>
+            <li>Dashboards</li>
+            <li>Automação</li>
+            <li>Análise de dados</li>
+          </ul>
+        </div>
+        <div class="bubble">
+          <div class="icon">🌐</div>
+          <h3>Criação de Websites</h3>
+          <ul>
+            <li>Landing Pages</li>
+            <li>Portfólios</li>
+            <li>Sites Institucionais</li>
+            <li>Websites Offline</li>
+            <li>Design Responsivo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <a href="https://wa.me/5583993440922" class="cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Solicite um Orçamento
+        </a>
+        <div class="contacts">
+          <a class="contact" href="https://wa.me/5583993440922" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.5A11.8 11.8 0 0 0 3.2 19.3L2 22.5l3.3-1.1A11.8 11.8 0 1 0 20 3.5Zm-8 19a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-2 .6.6-1.9-.2-.3A9.5 9.5 0 1 1 12 22.5Zm5.5-7.1c-.3-.2-1.8-.9-2.1-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.1-.6 0a7.8 7.8 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5a.5.5 0 0 0 0-.5c0-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5c0 1.5 1.1 2.9 1.2 3.1a11.4 11.4 0 0 0 4.4 3.9c2.6 1.1 2.6.7 3.1.7a2.8 2.8 0 0 0 1.9-1.3 2.4 2.4 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3Z"/></svg>
+            WhatsApp
+          </a>
+          <a class="contact" href="https://www.instagram.com/notmonteiro_/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            Instagram
+          </a>
+<!--          <a class="contact" href="mailto:contato@exemplo.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            E-mail -->
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="portrait-wrap">
+      <div class="portrait-frame">
+        <img src="kaka.jpeg" alt="Programador freelancer especialista em tecnologia" width="1024" height="1024"/>
+      </div>
+      <div class="tag tag-1"><span class="pulse"></span>system.online()</div>
+      <div class="tag tag-2"><span class="pulse"></span>data.analyze()</div>
+      <div class="tag tag-3"><span class="pulse"></span>deploy.success</div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
