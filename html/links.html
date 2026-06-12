@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Links • Sites Criados</title>
+<meta name="description" content="Links para sites e projetos desenvolvidos." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/geral.css">
+<style>
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .link-card {
+    border-radius: 20px;
+    background: linear-gradient(160deg, rgba(15,23,42,.9), rgba(11,11,11,.7));
+    border: 1px solid rgba(37,99,235,.2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px -20px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.04);
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .link-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(37,99,235,.55);
+    box-shadow: 0 30px 60px -20px rgba(37,99,235,.4);
+  }
+  .link-card-body { padding: 28px 24px 20px; flex: 1; display: flex; flex-direction: column; }
+  .link-card-icon { font-size: 36px; margin-bottom: 14px; }
+  .link-card-title { font-size: 17px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 8px; }
+  .link-card-desc { font-size: 13px; color: var(--light); line-height: 1.6; flex: 1; }
+  .link-card-footer { padding: 0 24px 24px; }
+  .link-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 13px;
+    background: linear-gradient(135deg, #2563EB, #1d4ed8);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 6px 20px -6px rgba(37,99,235,.5);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .link-card-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px -6px rgba(37,99,235,.8);
+  }
+  .back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 48px;
+    padding: 14px 28px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 14px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    color: var(--light);
+    text-decoration: none;
+    transition: all .25s;
+  }
+  .back-home:hover {
+    border-color: rgba(37,99,235,.5);
+    color: #fff;
+  }
+  .links-header {
+    text-align: center;
+    margin-top: 48px;
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="grid-bg"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <nav class="main-nav">
+    <a href="../index.html" class="nav-brand">
+      <span class="dot"></span>
+      <span>Tech Solutions</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Início</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="links.html" class="active">Links</a>
+    </div>
+    <a href="https://wa.me/5583993440922" class="nav-cta" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.5A11.8 11.8 0 0 0 3.2 19.3L2 22.5l3.3-1.1A11.8 11.8 0 1 0 20 3.5Z"/></svg>
+      Contato
+    </a>
+  </nav>
+
+  <div class="container">
+    <div class="links-header">
+      <p class="section-eyebrow">// sites.render()</p>
+      <h1 class="section-title">Sites <span class="accent">Criados</span></h1>
+      <p class="section-subtitle" style="margin:14px auto 0;">Projetos desenvolvidos — websites, ferramentas e portfólios.</p>
+    </div>
+
+    <div class="links-grid">
+      <div class="link-card">
+        <div class="link-card-body">
+          <div class="link-card-icon">🎨</div>
+          <div class="link-card-title">Chicletinho</div>
+          <div class="link-card-desc">Portfólio de arte digital com commissions, OCs, fanarts e ilustrações. Design responsivo com sidebar colapsável e tema claro/escuro.</div>
+        </div>
+        <div class="link-card-footer">
+          <a href="https://kmwhale.github.io/chicletinho/" class="link-card-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <div class="link-card">
+        <div class="link-card-body">
+          <div class="link-card-icon">📋</div>
+          <div class="link-card-title">Tierlist Dredd</div>
+          <div class="link-card-desc">Ferramenta interativa para criação de tierlists personalizadas. Arraste e organize itens em categorias.</div>
+        </div>
+        <div class="link-card-footer">
+          <a href="https://kmwhale.github.io/TierlistDredd/" class="link-card-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <div class="link-card">
+        <div class="link-card-body">
+          <div class="link-card-icon">🎰</div>
+          <div class="link-card-title">Roleta do Polímata</div>
+          <div class="link-card-desc">Roleta interativa para sorteios e decisões aleatórias com interface divertida e responsiva.</div>
+        </div>
+        <div class="link-card-footer">
+          <a href="https://kmwhale.github.io/Roleta-do-pol-mita/" class="link-card-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <div class="link-card">
+        <div class="link-card-body">
+          <div class="link-card-icon">🌐</div>
+          <div class="link-card-title">Projeto 7</div>
+          <div class="link-card-desc">Site experimental com design moderno e animações CSS. Projeto de exploração visual.</div>
+        </div>
+        <div class="link-card-footer">
+          <a href="https://kmwhale.github.io/7/" class="link-card-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <div class="link-card">
+        <div class="link-card-body">
+          <div class="link-card-icon">🚀</div>
+          <div class="link-card-title">Rumo</div>
+          <div class="link-card-desc">Landing page institucional com identidade visual clean, seções de serviços e call-to-action.</div>
+        </div>
+        <div class="link-card-footer">
+          <a href="https://kmwhale.github.io/Rumo/" class="link-card-btn" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Acessar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;padding-bottom:48px;">
+      <a href="../index.html" class="back-home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </a>
+    </div>
+  </div>
+</div>
+<script src="../js/geral.js"></script>
+</body>
+</html>

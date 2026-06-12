@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfólio • Soluções Digitais</title>
+<meta name="description" content="Portfólio de trabalhos: websites, dashboards, automações e suporte técnico." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/geral.css">
+</head>
+<body>
+<div class="stage">
+
+  <div class="grid-bg"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <nav class="main-nav">
+    <a href="../index.html" class="nav-brand">
+      <span class="dot"></span>
+      <span>Tech Solutions</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html">Início</a>
+      <a href="portfolio.html" class="active">Portfólio</a>
+    </div>
+    <a href="https://wa.me/5583993440922" class="nav-cta" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.5A11.8 11.8 0 0 0 3.2 19.3L2 22.5l3.3-1.1A11.8 11.8 0 1 0 20 3.5Z"/></svg>
+      Contato
+    </a>
+  </nav>
+
+  <div class="container">
+
+    <div>
+      <p class="section-eyebrow">// portfolio.render()</p>
+      <h1 class="section-title">Trabalhos <span class="accent">Realizados</span></h1>
+      <p class="section-subtitle">Projetos entregues — websites, dashboards, automações e suporte técnico.</p>
+    </div>
+
+    <div class="stats-row" style="margin-top:48px;">
+      <div class="stat-card">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Projetos Entregues</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Taxa de Satisfação</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Áreas de Atuação</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">24h</div>
+        <div class="stat-label">Suporte Rápido</div>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" onclick="filterCards('all', this)">Todos</button>
+      <button class="filter-btn" onclick="filterCards('web', this)">Websites</button>
+      <button class="filter-btn" onclick="filterCards('data', this)">Dados</button>
+      <button class="filter-btn" onclick="filterCards('suporte', this)">Suporte</button>
+    </div>
+
+    <div class="projects-grid" id="grid">
+
+      <div class="card" data-cat="web">
+        <div class="card-thumb">
+          🌐
+          <span class="card-badge">Website</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Landing Page Institucional</div>
+          <div class="card-desc">Página de apresentação profissional com design responsivo, seções de serviços, depoimentos e CTA otimizado para conversão.</div>
+          <div class="card-tags">
+            <span class="tag-pill">HTML</span>
+            <span class="tag-pill">CSS</span>
+            <span class="tag-pill">Responsivo</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="card-link primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Ver projeto
+          </a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="data">
+        <div class="card-thumb">
+          📊
+          <span class="card-badge green">Dados</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Dashboard de Vendas</div>
+          <div class="card-desc">Painel interativo com métricas de vendas mensais, segmentação por região e alertas automáticos de metas.</div>
+          <div class="card-tags">
+            <span class="tag-pill">Excel</span>
+            <span class="tag-pill">Power BI</span>
+            <span class="tag-pill">Automação</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="card-link primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Ver projeto
+          </a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="web">
+        <div class="card-thumb">
+          🖥️
+          <span class="card-badge purple">Portfólio</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Portfólio Freelancer</div>
+          <div class="card-desc">Site pessoal com identidade visual dark, animações CSS e layout totalmente responsivo.</div>
+          <div class="card-tags">
+            <span class="tag-pill">HTML</span>
+            <span class="tag-pill">CSS</span>
+            <span class="tag-pill">Design System</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="links.html" class="card-link primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Ver ao vivo
+          </a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="data">
+        <div class="card-thumb">
+          🗂️
+          <span class="card-badge green">Dados</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Limpeza e Organização de Planilhas</div>
+          <div class="card-desc">Tratamento de base com +5.000 linhas: remoção de duplicatas, padronização de formatos e relatório final.</div>
+          <div class="card-tags">
+            <span class="tag-pill">Excel</span>
+            <span class="tag-pill">Limpeza</span>
+            <span class="tag-pill">Python</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="card-link primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Ver projeto
+          </a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="suporte">
+        <div class="card-thumb">
+          ⚙️
+          <span class="card-badge orange">Suporte</span>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Formatação e Otimização de PC</div>
+          <div class="card-desc">Reinstalação do Windows, remoção de malware, drivers e otimização de performance para uso profissional.</div>
+          <div class="card-tags">
+            <span class="tag-pill">Windows</span>
+            <span class="tag-pill">Hardware</span>
+            <span class="tag-pill">Otimização</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/5583993440922" class="card-link primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            Solicitar
+          </a>
+        </div>
+      </div>
+
+      <div class="card" data-cat="web" style="border-style:dashed;opacity:.55;cursor:default;">
+        <div class="card-thumb" style="font-size:36px;color:rgba(37,99,235,.5);">＋</div>
+        <div class="card-body">
+          <div class="card-title" style="color:var(--light);">Próximo projeto</div>
+          <div class="card-desc">Em breve — novos trabalhos serão adicionados aqui.</div>
+          <div class="card-tags"><span class="tag-pill">Em breve</span></div>
+        </div>
+        <div class="card-footer">
+          <a href="https://wa.me/5583993440922" class="card-link secondary" target="_blank" rel="noopener">Fale comigo</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-section">
+      <div>
+        <h2>Tem um projeto em mente?</h2>
+        <p>Entre em contato e receba um orçamento sem compromisso.</p>
+      </div>
+      <a href="https://wa.me/5583993440922" class="cta-btn" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.5A11.8 11.8 0 0 0 3.2 19.3L2 22.5l3.3-1.1A11.8 11.8 0 1 0 20 3.5Zm-8 19a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-2 .6.6-1.9-.2-.3A9.5 9.5 0 1 1 12 22.5Zm5.5-7.1c-.3-.2-1.8-.9-2.1-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.1-.6 0a7.8 7.8 0 0 1-3.8-3.3c-.3-.5.3-.5.8-1.5a.5.5 0 0 0 0-.5c0-.1-.7-1.6-.9-2.2s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1.1 2.5c0 1.5 1.1 2.9 1.2 3.1a11.4 11.4 0 0 0 4.4 3.9c2.6 1.1 2.6.7 3.1.7a2.8 2.8 0 0 0 1.9-1.3 2.4 2.4 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3Z"/></svg>
+        Solicitar orçamento
+      </a>
+    </div>
+
+  </div>
+</div>
+<script src="../js/geral.js"></script>
+</body>
+</html>
